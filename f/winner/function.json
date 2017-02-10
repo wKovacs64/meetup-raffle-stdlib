@@ -1,0 +1,16 @@
+{
+  "name": "winner",
+  "description": "Selects a raffle winner.",
+  "args": [
+    "meetup",
+    "event"
+  ],
+  "kwargs": {
+    "meetup": "the name of the Meetup group",
+    "event": "an ID of a particular event",
+    "meetup-api-key": "your private Meetup API key"
+  },
+  "http": {
+    "headers": {}
+  }
+}

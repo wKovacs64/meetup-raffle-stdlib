@@ -1,0 +1,51 @@
+{
+  "name": "meetup-raffle",
+  "version": "0.0.1-dev.0",
+  "description": "Select a raffle winner at your upcoming Meetup.",
+  "keywords": [
+    "meetup",
+    "raffle",
+    "stdlib",
+    "microservice"
+  ],
+  "author": {
+    "name": "Justin Hall",
+    "email": "justin.r.hall@gmail.com"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "homepage": "https://github.com/wKovacs64/meetup-raffle",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wKovacs64/meetup-raffle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wKovacs64/meetup-raffle/issues"
+  },
+  "main": "f/winner/index.js",
+  "scripts": {
+    "lint": "eslint f"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "common-tags": "^1.4.0",
+    "meetup-randomizer": "^2.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "private": true,
+  "stdlib": {
+    "name": "wKovacs64/meetup-raffle",
+    "defaultFunction": "winner",
+    "timeout": 10000,
+    "publish": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "max-len": [
+      "error",
+      80,
+      2
+    ],
+    "valid-jsdoc": [
+      "error"
+    ]
+  }
+}
