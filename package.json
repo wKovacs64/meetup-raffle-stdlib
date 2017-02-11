@@ -1,6 +1,6 @@
 {
   "name": "meetup-raffle",
-  "version": "0.0.1-dev.0",
+  "version": "1.0.0",
   "description": "Select a raffle winner at your upcoming Meetup.",
   "keywords": [
     "meetup",
@@ -46,6 +46,6 @@
     "name": "wKovacs64/meetup-raffle",
     "defaultFunction": "winner",
     "timeout": 10000,
-    "publish": false
+    "publish": true
   }
 }
