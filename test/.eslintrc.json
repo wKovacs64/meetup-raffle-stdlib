@@ -1,0 +1,10 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "comma-dangle": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": "off"
+  }
+}

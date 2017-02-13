@@ -1,6 +1,8 @@
 const axios = require('axios');
-const meetupRandomizer = require('meetup-randomizer');
 const oneLineTrim = require('common-tags/lib/oneLineTrim');
+// Using 'let' here to accommodate rewire in tests
+// eslint-disable-next-line prefer-const
+let meetupRandomizer = require('meetup-randomizer');
 
 /**
  * Determines if a given HTTP status code should be considered a success (i.e.,
