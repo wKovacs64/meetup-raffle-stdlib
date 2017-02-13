@@ -39,38 +39,38 @@ in the event of a failure.
 Select a raffle winner from the soonest upcoming or currently in-progress event:
 
 ```bash
-$ lib wKovacs64.meetup-raffle.winner --meetup frontend-devs
+$ lib wKovacs64.meetup-raffle.winner --meetup your-group-name
 ```
 
 Optionally specify a particular event by ID:
 
 ```bash
-$ lib wKovacs64.meetup-raffle.winner --meetup frontend-devs --event 236136797
+$ lib wKovacs64.meetup-raffle.winner --meetup your-group-name --event 123456789
 ```
 
 Or, shorthand for the same request:
 
 ```bash
-$ lib wKovacs64.meetup-raffle.winner frontend-devs 236136797
+$ lib wKovacs64.meetup-raffle.winner your-group-name 123456789
 ```
 
 To authenticate requests (which retrieves full names rather than abbreviated
 last names), provide your own private Meetup API key:
 
 ```bash
-$ lib wKovacs64.meetup-raffle.winner frontend-devs --meetup-api-key XXXXXXXXXXX
+$ lib wKovacs64.meetup-raffle.winner your-group-name --meetup-api-key XXXXXXXXXXX
 ```
 
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/meetup-raffle/winner?meetup=frontend-devs
+https://wkovacs64.stdlib.com/meetup-raffle/winner?meetup=your-group-name
 ```
 
 Or, perform an authenticated request:
 
 ```http
-https://wkovacs64.stdlib.com/meetup-raffle/winner?meetup=frontend-devs&meetup-api-key=XXXXXXXXXXX
+https://wkovacs64.stdlib.com/meetup-raffle/winner?meetup=your-group-name&meetup-api-key=XXXXXXXXXXX
 ```
 
 ###### Web and Node.js:
@@ -79,7 +79,7 @@ https://wkovacs64.stdlib.com/meetup-raffle/winner?meetup=frontend-devs&meetup-ap
 const lib = require('lib');
 const { winner } = lib.wKovacs64['meetup-raffle'];
 
-winner({ meetup: 'frontend-devs' }, (err, data) => {
+winner({ meetup: 'your-group-name' }, (err, data) => {
   // handle error or data
 });
 ```
