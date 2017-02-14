@@ -30,7 +30,7 @@ require('./mockAxios');
 
 const winner = rewire('../../f/winner');
 
-describe('index.js', () => {
+describe('winner', () => {
   before(() => {
     winner.__set__('meetupRandomizer', meetupRandomizerMock);
   });
@@ -139,7 +139,7 @@ describe('index.js', () => {
     });
   });
 
-  describe('winner', () => {
+  describe('default export', () => {
     it('should call back with an Error if no Meetup is provided', (done) => {
       winner(PARAMS_NONE, (err, data) => {
         try {
