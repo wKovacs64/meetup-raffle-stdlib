@@ -3,11 +3,14 @@
 *A [StdLib][stdlib] microservice for selecting a raffle winner at a
 [Meetup][meetup] event.*
 
-Functions:
+[![Build Status][travis-image]][travis-url]
+[![Code Coverage][coveralls-image]][coveralls-url]
+
+## Functions:
 
 * [winner](#winner)
 
-## winner
+### winner
 
 ##### Description
 
@@ -97,4 +100,8 @@ winner({ meetup: 'your-group-name' }, (err, data) => {
 
 [meetup]: https://www.meetup.com
 [stdlib]: https://stdlib.com
+[travis-image]: https://img.shields.io/travis/wKovacs64/meetup-raffle.svg?style=flat-square
+[travis-url]: https://travis-ci.org/wKovacs64/meetup-raffle
+[coveralls-image]: https://img.shields.io/coveralls/wKovacs64/meetup-raffle.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/github/wKovacs64/meetup-raffle
 [meetup-randomizer]: https://github.com/durancristhian/meetup-randomizer
