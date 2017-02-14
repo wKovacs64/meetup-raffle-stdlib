@@ -4,6 +4,7 @@ const {
   STATUS_200,
   STATUS_204,
   STATUS_404,
+  STATUS_500,
   EVENT_ID,
   EVENT_ID_NOT_FOUND,
   EVENT_ID_NOT_PUBLIC,
@@ -62,6 +63,14 @@ before(() => {
         id: EVENT_ID_NOT_PUBLIC,
         visibility: 'public_limited',
       },
+    }
+  );
+  // All other requests
+  moxios.stubRequest(
+    /.*/,
+    {
+      status: STATUS_500,
+      responseText: 'API request URL not mocked!',
     }
   );
 });
