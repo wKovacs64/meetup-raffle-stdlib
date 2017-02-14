@@ -1,6 +1,6 @@
 # meetup-raffle
 
-*A [StdLib][stdlib] microservice for selecting a raffle winner at a
+*An [StdLib][stdlib] microservice for selecting a raffle winner at a
 [Meetup][meetup] event.*
 
 [![Build Status][travis-image]][travis-url]
