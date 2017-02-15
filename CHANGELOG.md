@@ -1,5 +1,11 @@
 # Change Log
 
+## Version 1.0.3 *(2017-02-14)*
+
+* Updated usage documentation to show `winner` is the default function
+* Mocked all unexpected API requests in test to prevent actual network traffic
+* Restructured `winner` test file to match the corresponding source
+
 ## Version 1.0.2 *(2017-02-14)*
 
 * Fixed minor typos in documentation

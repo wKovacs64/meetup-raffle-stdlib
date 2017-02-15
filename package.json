@@ -1,6 +1,6 @@
 {
   "name": "meetup-raffle",
-  "version": "1.0.3-dev.0",
+  "version": "1.0.3",
   "description": "Select a raffle winner at your upcoming Meetup.",
   "keywords": [
     "meetup",
