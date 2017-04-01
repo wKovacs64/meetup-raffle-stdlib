@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/wKovacs64/meetup-raffle/issues"
   },
-  "main": "f/winner/index.js",
+  "main": "functions/winner/index.js",
   "scripts": {
     "lint": "eslint f test",
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha"
