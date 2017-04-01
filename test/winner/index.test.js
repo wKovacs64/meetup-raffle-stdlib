@@ -28,7 +28,7 @@ const {
 const meetupRandomizerMock = require('./meetupRandomizer.mock.js');
 require('./mockAxios');
 
-const winner = rewire('../../f/winner');
+const winner = rewire('../../functions/winner');
 
 describe('winner', () => {
   before(() => {
