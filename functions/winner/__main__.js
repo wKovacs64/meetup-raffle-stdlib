@@ -75,31 +75,15 @@ const getRsvpsUrl = (baseUrl, eventId, apiKey) => (
 );
 
 /**
- * Constructs an options object containing the results of processing the
- * provided parameters.
+ * Selects a raffle winner.
  *
- * @param {Object} params a StdLib params object
- * @returns {Object} an object containing a processed version of the provided
- * StdLib params
+ * @param {string} meetup the name of the Meetup group
+ * @param {string} specificEventId an ID of a particular event
+ * @param {string} meetupApiKey your private Meetup API key
+ * @returns {object} an object with a winner property representing a raffle
+ * winner
  */
-const optsFromParams = params => (
-  {
-    meetup: params.args.length
-      ? params.args[0]
-      : params.kwargs.meetup,
-    specificEventId: params.args.length > 1
-      ? params.args[1]
-      : params.kwargs.event || '',
-  }
-);
-
-module.exports = (params, callback) => {
-  const { meetup, specificEventId } = optsFromParams(params);
-
-  if (!meetup) {
-    return callback(new Error('Meetup name is required.'));
-  }
-
+module.exports = async (meetup, specificEventId = '', meetupApiKey = '') => {
   const baseUrl = `https://api.meetup.com/${encodeURIComponent(meetup)}/events`;
   const eventUrlSuffix = '?status=upcoming&only=id,visibility';
   const eventUrl = oneLineTrim`
@@ -111,11 +95,7 @@ module.exports = (params, callback) => {
     .then(parseEventsResponse)
     .then(getIdFromEvent)
     .then(eventId => meetupRandomizer(
-      getRsvpsUrl(baseUrl, eventId, params.kwargs['meetup-api-key']),
-      null,
-      meetup,
-      eventId // eslint-disable-line comma-dangle
+      getRsvpsUrl(baseUrl, eventId, meetupApiKey), null, meetup, eventId
     ))
-    .then(winner => callback(null, { winner: winner.name }))
-    .catch(callback);
+    .then(winner => ({ winner: winner.name }));
 };

@@ -22,12 +22,12 @@ hosts are excluded.
 * `meetup`: the name of the Meetup group (***required***)
 * `event`: the ID of a particular event (*optional*, default: soonest
   upcoming/in-progress event)
-* `meetup-api-key`: your private Meetup API key (*optional*, default: none)
+* `meetupApiKey`: your private Meetup API key (*optional*, default: none)
 
 ##### Data Returned
 
-Returns a JSON object containing a `winner` key, or a plain text error message
-in the event of a failure.
+Returns a JSON object containing a `winner` key, or an error message in the
+event of a failure.
 
 ```json
 {
@@ -61,19 +61,19 @@ To authenticate requests (which retrieves full names rather than abbreviated
 last names), provide your own private Meetup API key:
 
 ```bash
-$ lib wKovacs64.meetup-raffle your-group-name --meetup-api-key XXXXXXXXXXX
+$ lib wKovacs64.meetup-raffle your-group-name --meetupApiKey XXXXXXXXXXX
 ```
 
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/meetup-raffle?meetup=your-group-name
+https://wkovacs64.stdlib.com/meetup-raffle/?meetup=your-group-name
 ```
 
 Or, perform an authenticated request:
 
 ```http
-https://wkovacs64.stdlib.com/meetup-raffle?meetup=your-group-name&meetup-api-key=XXXXXXXXXXX
+https://wkovacs64.stdlib.com/meetup-raffle/?meetup=your-group-name&meetupApiKey=XXXXXXXXXXX
 ```
 
 ###### Web and Node.js:

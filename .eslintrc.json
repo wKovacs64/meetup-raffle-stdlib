@@ -1,13 +1,11 @@
 {
   "extends": "airbnb",
   "rules": {
+    "comma-dangle": "off",
     "max-len": [
       "error",
       80,
       2
-    ],
-    "valid-jsdoc": [
-      "error"
     ]
   }
 }

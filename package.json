@@ -1,6 +1,6 @@
 {
   "name": "meetup-raffle",
-  "version": "1.0.4-dev.0",
+  "version": "2.0.0-dev.0",
   "description": "Select a raffle winner at your upcoming Meetup.",
   "keywords": [
     "meetup",
@@ -22,9 +22,9 @@
   "bugs": {
     "url": "https://github.com/wKovacs64/meetup-raffle/issues"
   },
-  "main": "functions/winner/index.js",
+  "main": "functions/winner/__main__.js",
   "scripts": {
-    "lint": "eslint f test",
+    "lint": "eslint functions test",
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha"
   },
   "dependencies": {
@@ -44,16 +44,21 @@
     "mocha": "^3.2.0",
     "moxios": "^0.3.0",
     "nyc": "^10.1.2",
-    "rewire": "^2.5.2"
+    "rewire": "^2.5.2",
+    "sinon": "^2.2.0"
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">= 7"
   },
   "private": true,
   "stdlib": {
+    "build": "faaslang",
     "name": "wKovacs64/meetup-raffle",
-    "defaultFunction": "winner",
     "timeout": 10000,
-    "publish": true
+    "publish": true,
+    "personalize": {
+      "keys": [],
+      "user": []
+    }
   }
 }

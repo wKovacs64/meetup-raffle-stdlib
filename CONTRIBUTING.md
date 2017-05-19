@@ -5,10 +5,10 @@ the repository and sending a merge request.
 
 When submitting code, please make every effort to follow existing conventions
 and style in order to keep the code as readable as possible. This project
-adheres to the [Airbnb](https://github.com/airbnb/javascript) code style, with a
-few modifications:
+adheres to the [Airbnb](https://github.com/airbnb/javascript) code style, with
+the following modifications:
 
 * Avoid lines longer than **80** characters
-* Valid JSDoc comments are required (where provided)
+* Omit trailing commas in function calls
 
 Thank you.
