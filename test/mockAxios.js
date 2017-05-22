@@ -12,7 +12,7 @@ const {
   MEETUP,
   MEETUP_NOT_FOUND,
   MEETUP_NO_EVENTS,
-} = require('../testData');
+} = require('./testData');
 
 before(() => {
   moxios.install();

@@ -6,11 +6,7 @@
 [![Build Status][travis-image]][travis-url]
 [![Code Coverage][coveralls-image]][coveralls-url]
 
-## Functions:
-
-* [winner](#winner) *(default)*
-
-### winner
+### The default (and only) function:
 
 ##### Description
 
@@ -80,11 +76,14 @@ https://wkovacs64.stdlib.com/meetup-raffle/?meetup=your-group-name&meetupApiKey=
 
 ```js
 const lib = require('lib');
-const { winner } = lib.wKovacs64['meetup-raffle'];
 
-winner({ meetup: 'your-group-name' }, (err, data) => {
-  // handle error or data
-});
+lib.wKovacs64['meetup-raffle']({ meetup: 'your-group-name' })
+  .then((data) => {
+    // handle data
+  })
+  .catch((err) => {
+    // handle error
+  });
 ```
 
 ## Limitations

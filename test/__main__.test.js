@@ -22,11 +22,11 @@ const {
   MEETUP_NO_EVENTS,
   MEETUP_NOT_FOUND,
   WINNER_NAME,
-} = require('../testData');
-const meetupRandomizerMock = require('./meetupRandomizer.mock.js');
+} = require('./testData');
+const meetupRandomizerMock = require('./meetupRandomizer.mock');
 require('./mockAxios');
 
-const winner = rewire('../../functions/winner/__main__');
+const winner = rewire('../functions/__main__');
 
 describe('winner', () => {
   const successHandler = sinon.spy();
