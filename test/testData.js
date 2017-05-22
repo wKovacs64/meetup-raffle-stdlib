@@ -32,6 +32,7 @@ const BASE_URL = 'https://...';
 const EVENT_ID = 'foo123';
 const EVENT_ID_NOT_FOUND = 'baz789';
 const EVENT_ID_NOT_PUBLIC = 'qux012';
+const EVENT_ID_UNEXPECTED = 'buz987';
 const API_KEY = 'bar456';
 const MEETUP = 'foo';
 const MEETUP_NOT_FOUND = 'bar';
@@ -54,6 +55,7 @@ module.exports = {
   EVENT_ID,
   EVENT_ID_NOT_FOUND,
   EVENT_ID_NOT_PUBLIC,
+  EVENT_ID_UNEXPECTED,
   API_KEY,
   MEETUP,
   MEETUP_NOT_FOUND,

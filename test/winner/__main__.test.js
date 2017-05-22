@@ -16,6 +16,7 @@ const {
   EVENT_ID,
   EVENT_ID_NOT_FOUND,
   EVENT_ID_NOT_PUBLIC,
+  EVENT_ID_UNEXPECTED,
   API_KEY,
   MEETUP,
   MEETUP_NO_EVENTS,
@@ -145,6 +146,17 @@ describe('winner', () => {
 
     it('should reject if Event not public', async () => (
       winner(MEETUP, EVENT_ID_NOT_PUBLIC)
+        .then(successHandler)
+        .catch(errorHandler)
+        .then(() => {
+          expect(successHandler.called).to.be.false;
+          expect(errorHandler.calledOnce).to.be.true;
+          expect(errorHandler.getCall(0).args[0].message).to.match(/^Sorry/);
+        })
+    ));
+
+    it('should reject on unexpected data', async () => (
+      winner(MEETUP, EVENT_ID_UNEXPECTED)
         .then(successHandler)
         .catch(errorHandler)
         .then(() => {

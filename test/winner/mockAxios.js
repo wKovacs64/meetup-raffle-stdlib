@@ -8,6 +8,7 @@ const {
   EVENT_ID,
   EVENT_ID_NOT_FOUND,
   EVENT_ID_NOT_PUBLIC,
+  EVENT_ID_UNEXPECTED,
   MEETUP,
   MEETUP_NOT_FOUND,
   MEETUP_NO_EVENTS,
@@ -39,6 +40,20 @@ before(() => {
     {
       status: STATUS_200,
       response: [],
+    }
+  );
+  // Unexpected data
+  moxios.stubRequest(
+    new RegExp(oneLineTrim`
+      /${encodeURIComponent(MEETUP)}/events
+      /${encodeURIComponent(EVENT_ID_UNEXPECTED)}\\?
+    `),
+    {
+      status: STATUS_204,
+      response: {
+        id: EVENT_ID_UNEXPECTED,
+        visibility: 'public',
+      },
     }
   );
   // Event not found

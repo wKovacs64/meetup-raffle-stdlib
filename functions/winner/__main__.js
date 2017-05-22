@@ -97,5 +97,10 @@ module.exports = async (meetup, specificEventId = '', meetupApiKey = '') => {
     .then(eventId => meetupRandomizer(
       getRsvpsUrl(baseUrl, eventId, meetupApiKey), null, meetup, eventId
     ))
-    .then(winner => ({ winner: winner.name }));
+    .then((person) => {
+      if (typeof person === 'object' && 'name' in person) {
+        return { winner: person.name };
+      }
+      throw new Error('Sorry, we received unexpected data for that request.');
+    });
 };
