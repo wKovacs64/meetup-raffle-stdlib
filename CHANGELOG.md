@@ -1,5 +1,15 @@
 # Change Log
 
+## Version 2.0.0 *(2017-05-21)*
+
+* Updated to be [FaaSlang](https://github.com/faaslang/faaslang) compliant
+* Improved error handling for unexpected data
+
+##### Breaking Changes:
+
+* Removed the `winner` function, moving functionality to the default function
+  (which most of the documentation has always referenced anyway)
+
 ## Version 1.0.3 *(2017-02-14)*
 
 * Updated usage documentation to show `winner` is the default function
