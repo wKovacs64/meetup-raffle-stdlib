@@ -1,5 +1,17 @@
 # Change Log
 
+## Version 3.0.0 *(2017-08-06)*
+
+* Updated HTTP endpoint links to use new lib.id domain
+* Added new `count` option to draw multiple winners at once, per
+  `meetup-randomizer@3.0.0`
+
+##### Breaking Changes:
+
+* Modified the schema of the returned object to contain a `winners` array of
+  strings representing the names of the winners in order to support the new
+  `count` option
+
 ## Version 2.0.1 *(2017-05-25)*
 
 * Updated `meetup-randomizer` for better error handling
