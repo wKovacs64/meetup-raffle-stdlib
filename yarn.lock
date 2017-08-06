@@ -1684,15 +1684,15 @@ md5-o-matic@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/md5-o-matic/-/md5-o-matic-0.1.1.tgz#822bccd65e117c514fab176b25945d54100a03c3"
 
-meetup-randomizer@^2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/meetup-randomizer/-/meetup-randomizer-2.10.0.tgz#41f228142b28ec002a13c8c0e86e5b86fd1182f3"
+meetup-randomizer@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/meetup-randomizer/-/meetup-randomizer-3.0.0.tgz#e1a7366019b6751643516582ff81cea177e80df8"
   dependencies:
     ansi "^0.3.1"
     commander "^2.9.0"
     jimp "^0.2.24"
     jquery "^3.0.0"
-    unique-random-array "^1.0.0"
+    unique-random-range "^1.0.3"
 
 mem@^1.1.0:
   version "1.1.0"
@@ -2572,15 +2572,9 @@ uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
 
-unique-random-array@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/unique-random-array/-/unique-random-array-1.0.0.tgz#42b3721c579388d8b667c93c2dbde3d5d81a9136"
-  dependencies:
-    unique-random "^1.0.0"
-
-unique-random@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/unique-random/-/unique-random-1.0.0.tgz#ce3e224c8242cd33a0e77b0d7180d77e6b62d0c4"
+unique-random-range@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/unique-random-range/-/unique-random-range-1.0.3.tgz#fd864ba995f57a242a26c08c21e399d6adcb0f89"
 
 url-regex@^3.0.0:
   version "3.2.0"

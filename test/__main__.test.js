@@ -175,7 +175,8 @@ describe('winner', () => {
           expect(successHandler.calledOnce).to.be.true;
           const data = successHandler.getCall(0).args[0];
           expect(data).to.be.an('object');
-          expect(data).to.have.property('winner').and.equal(WINNER_NAME);
+          expect(data).to.have.property('winners').that.is.an('array');
+          expect(data.winners[0]).to.equal(WINNER_NAME);
         })
     ));
   });

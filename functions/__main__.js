@@ -75,15 +75,21 @@ const getRsvpsUrl = (baseUrl, eventId, apiKey) => (
 );
 
 /**
- * Selects a raffle winner.
+ * Selects some raffle winners.
  *
  * @param {string} meetup the name of the Meetup group
  * @param {string} specificEventId an ID of a particular event
  * @param {string} meetupApiKey your private Meetup API key
- * @returns {object} an object with a winner property representing a raffle
- * winner
+ * @param {number} count the number of winners to draw (default: 1)
+ * @returns {object} an object containing a winners array of strings (the names
+ * of the winners)
  */
-module.exports = async (meetup, specificEventId = '', meetupApiKey = '') => {
+module.exports = async (
+  meetup,
+  specificEventId = '',
+  meetupApiKey = '',
+  count = 1
+) => {
   const baseUrl = `https://api.meetup.com/${encodeURIComponent(meetup)}/events`;
   const eventUrlSuffix = '?status=upcoming&only=id,visibility';
   const eventUrl = oneLineTrim`
@@ -94,12 +100,15 @@ module.exports = async (meetup, specificEventId = '', meetupApiKey = '') => {
     .get(eventUrl, { validateStatus })
     .then(parseEventsResponse)
     .then(getIdFromEvent)
-    .then(eventId => meetupRandomizer(
-      getRsvpsUrl(baseUrl, eventId, meetupApiKey), null, meetup, eventId
-    ))
-    .then((person) => {
-      if (typeof person === 'object' && 'name' in person) {
-        return { winner: person.name };
+    .then((eventId) => {
+      meetupRandomizer.setCustomApiUrl(
+        getRsvpsUrl(baseUrl, eventId, meetupApiKey)
+      );
+      return meetupRandomizer.run(meetup, eventId, count);
+    })
+    .then((winners) => {
+      if (Array.isArray(winners) && winners.length) {
+        return { winners: winners.map(winner => winner.name) };
       }
       throw new Error('Sorry, we received unexpected data for that request.');
     });

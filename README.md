@@ -10,24 +10,27 @@
 
 ##### Description
 
-Selects a random attendee from those who RSVP'd "yes" for the event. Event
+Selects some random attendees from those who RSVP'd "yes" for the event. Event
 hosts are excluded.
 
 ##### Parameters
 
-* `meetup`: the name of the Meetup group (***required***)
-* `event`: the ID of a particular event (*optional*, default: soonest
-  upcoming/in-progress event)
-* `meetupApiKey`: your private Meetup API key (*optional*, default: none)
+* `meetup`: the name of the Meetup group *(**required**)*
+* `event`: the ID of a particular event *(optional, default: soonest
+  upcoming/in-progress event)*
+* `meetupApiKey`: your private Meetup API key *(optional, default: none)*
+* `count`: the number of winners to draw *(optional, default: 1)*
 
 ##### Data Returned
 
-Returns a JSON object containing a `winner` key, or an error message in the
-event of a failure.
+Returns a JSON object containing a `winners` array of strings (the names of the
+raffle winners), or an StdLib error message in the event of a failure.
 
 ```json
 {
-    "winner": "Tiny Rick"
+    "winners": [
+        "Tiny Rick"
+    ]
 }
 ```
 
@@ -51,6 +54,12 @@ Or, shorthand for the same request:
 
 ```bash
 $ lib wKovacs64.meetup-raffle your-group-name 123456789
+```
+
+Draw multiple winners at once:
+
+```bash
+$ lib wKovacs64.meetup-raffle --meetup your-group-name --count 3
 ```
 
 To authenticate requests (which retrieves full names rather than abbreviated
