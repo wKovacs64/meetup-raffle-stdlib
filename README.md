@@ -72,13 +72,13 @@ $ lib wKovacs64.meetup-raffle your-group-name --meetupApiKey XXXXXXXXXXX
 ###### HTTP:
 
 ```http
-https://wkovacs64.stdlib.com/meetup-raffle/?meetup=your-group-name
+https://wkovacs64.lib.id/meetup-raffle/?meetup=your-group-name
 ```
 
 Or, perform an authenticated request:
 
 ```http
-https://wkovacs64.stdlib.com/meetup-raffle/?meetup=your-group-name&meetupApiKey=XXXXXXXXXXX
+https://wkovacs64.lib.id/meetup-raffle/?meetup=your-group-name&meetupApiKey=XXXXXXXXXXX
 ```
 
 ###### Web and Node.js:
