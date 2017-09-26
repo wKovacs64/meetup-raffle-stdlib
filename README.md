@@ -106,6 +106,8 @@ lib.wKovacs64['meetup-raffle']({ meetup: 'your-group-name' })
 
   **Reason:** This is a Meetup API restriction.
 
+[![Sponsor][sponsor-image]][sponsor-link]
+
 [meetup]: https://www.meetup.com
 [stdlib]: https://stdlib.com
 [travis-image]: https://img.shields.io/travis/wKovacs64/meetup-raffle.svg?style=flat-square
@@ -113,3 +115,5 @@ lib.wKovacs64['meetup-raffle']({ meetup: 'your-group-name' })
 [coveralls-image]: https://img.shields.io/coveralls/wKovacs64/meetup-raffle.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/github/wKovacs64/meetup-raffle
 [meetup-randomizer]: https://github.com/durancristhian/meetup-randomizer
+[sponsor-image]: https://app.codesponsor.io/embed/1Z34ZozRAhWZ8QKV42A2yt3r/wKovacs64/meetup-raffle.svg
+[sponsor-link]: https://app.codesponsor.io/link/1Z34ZozRAhWZ8QKV42A2yt3r/wKovacs64/meetup-raffle
