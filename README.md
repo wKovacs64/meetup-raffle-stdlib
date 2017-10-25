@@ -106,7 +106,11 @@ lib.wKovacs64['meetup-raffle']({ meetup: 'your-group-name' })
 
   **Reason:** This is a Meetup API restriction.
 
+---
+
 [![Sponsor][sponsor-image]][sponsor-link]
+
+---
 
 [meetup]: https://www.meetup.com
 [stdlib]: https://stdlib.com
