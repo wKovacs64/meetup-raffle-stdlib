@@ -2,12 +2,7 @@
   "name": "meetup-raffle",
   "version": "3.0.1-dev.0",
   "description": "Select a raffle winner at your upcoming Meetup.",
-  "keywords": [
-    "meetup",
-    "raffle",
-    "stdlib",
-    "microservice"
-  ],
+  "keywords": ["meetup", "raffle", "stdlib", "microservice"],
   "author": {
     "name": "Justin Hall",
     "email": "justin.r.hall@gmail.com"
@@ -26,7 +21,7 @@
   "scripts": {
     "clean": "rimraf coverage",
     "format": "prettier --write \"**/*.js\"",
-    "lint": "eslint . --ignore-pattern coverage",
+    "lint": "eslint .",
     "test": "cross-env NODE_ENV=test jest --config jest.config.json",
     "test:coverage": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch"
