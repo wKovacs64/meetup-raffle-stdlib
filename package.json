@@ -2,7 +2,12 @@
   "name": "meetup-raffle",
   "version": "3.0.1-dev.0",
   "description": "Select a raffle winner at your upcoming Meetup.",
-  "keywords": ["meetup", "raffle", "stdlib", "microservice"],
+  "keywords": [
+    "meetup",
+    "raffle",
+    "stdlib",
+    "microservice"
+  ],
   "author": {
     "name": "Justin Hall",
     "email": "justin.r.hall@gmail.com"
@@ -27,13 +32,13 @@
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.17.0",
     "common-tags": "^1.4.0",
     "meetup-randomizer": "^3.0.0"
   },
   "devDependencies": {
-    "coveralls": "^2.13.1",
-    "cross-env": "^5.0.4",
+    "coveralls": "^3.0.0",
+    "cross-env": "^5.1.1",
     "eslint": "^4.10.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.7.0",
