@@ -1,9 +1,0 @@
-{
-  "env": {
-    "mocha": true
-  },
-  "rules": {
-    "no-underscore-dangle": "off",
-    "no-unused-expressions": "off"
-  }
-}

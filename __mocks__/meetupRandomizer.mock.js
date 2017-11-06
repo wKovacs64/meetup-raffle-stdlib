@@ -1,4 +1,3 @@
-const sinon = require('sinon');
 const { EVENT_ID, MEETUP, WINNER_NAME } = require('./testData');
 
 module.exports = {
@@ -7,10 +6,10 @@ module.exports = {
       return Promise.resolve([
         {
           name: WINNER_NAME,
-        }
+        },
       ]);
     }
     return Promise.resolve([]);
   },
-  setCustomApiUrl: sinon.spy()
+  setCustomApiUrl: jest.fn(),
 };

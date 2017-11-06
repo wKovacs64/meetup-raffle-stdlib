@@ -1,6 +1,11 @@
+__mocks__
+.editorconfig
+.gitattributes
+.gitignore
 .idea
-.travis.yml
-.nyc_output
 .prettierrc
+.travis.yml
 coverage
+jest.config.json
 test
+yarn.lock

@@ -1,4 +1,5 @@
 const oneLineTrim = require('common-tags/lib/oneLineTrim');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const moxios = require('moxios');
 const {
   STATUS_200,
@@ -14,19 +15,16 @@ const {
   MEETUP_NO_EVENTS,
 } = require('./testData');
 
-before(() => {
+beforeAll(() => {
   moxios.install();
   // Meetup with a valid, public event
-  moxios.stubRequest(
-    new RegExp(`/${encodeURIComponent(MEETUP)}/events/\\?`),
-    {
-      status: STATUS_204,
-      response: {
-        id: EVENT_ID,
-        visibility: 'public',
-      },
-    }
-  );
+  moxios.stubRequest(new RegExp(`/${encodeURIComponent(MEETUP)}/events/\\?`), {
+    status: STATUS_204,
+    response: {
+      id: EVENT_ID,
+      visibility: 'public',
+    },
+  });
   // Meetup not found
   moxios.stubRequest(
     new RegExp(`/${encodeURIComponent(MEETUP_NOT_FOUND)}/events/\\?`),
@@ -81,15 +79,12 @@ before(() => {
     }
   );
   // All other requests
-  moxios.stubRequest(
-    /.*/,
-    {
-      status: STATUS_500,
-      responseText: 'API request URL not mocked!',
-    }
-  );
+  moxios.stubRequest(/.*/, {
+    status: STATUS_500,
+    responseText: 'API request URL not mocked!',
+  });
 });
 
-after(() => {
+afterAll(() => {
   moxios.uninstall();
 });

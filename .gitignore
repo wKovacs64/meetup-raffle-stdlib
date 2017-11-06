@@ -146,11 +146,6 @@ fabric.properties
 # sftp configuration file
 sftp-config.json
 
-
-### nyc ###
-.nyc_output/
-
-
 ### StdLib ###
 /node_modules
 env.json

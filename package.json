@@ -19,9 +19,12 @@
   },
   "main": "functions/winner/__main__.js",
   "scripts": {
-    "format": "prettier --write \"functions/**/*.js\"",
-    "lint": "eslint functions test",
-    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha"
+    "clean": "rimraf coverage",
+    "format": "prettier --write \"**/*.js\"",
+    "lint": "eslint . --ignore-pattern coverage",
+    "test": "cross-env NODE_ENV=test jest --config jest.config.json",
+    "test:coverage": "npm run test -- --coverage",
+    "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -29,19 +32,16 @@
     "meetup-randomizer": "^3.0.0"
   },
   "devDependencies": {
-    "chai": "^4.1.1",
     "coveralls": "^2.13.1",
     "cross-env": "^5.0.4",
     "eslint": "^4.10.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.7.0",
     "eslint-plugin-import": "^2.8.0",
-    "mocha": "^3.5.0",
+    "jest": "^21.2.1",
     "moxios": "^0.4.0",
-    "nyc": "^11.1.0",
     "prettier": "^1.7.4",
-    "rewire": "^2.5.2",
-    "sinon": "^3.0.0"
+    "rimraf": "^2.6.2"
   },
   "engines": {
     "node": ">= 7"
