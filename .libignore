@@ -1,5 +1,6 @@
 .idea
 .travis.yml
 .nyc_output
+.prettierrc
 coverage
 test

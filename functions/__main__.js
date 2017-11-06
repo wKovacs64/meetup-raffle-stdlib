@@ -12,9 +12,8 @@ let meetupRandomizer = require('meetup-randomizer');
  * @returns {boolean} boolean value of whether or not the given HTTP status code
  * should be considered a success (non-error)
  */
-const validateStatus = status => (
-  (status >= 200 && status < 300) || status === 404
-);
+const validateStatus = status =>
+  (status >= 200 && status < 300) || status === 404;
 
 /**
  * Extracts an event object from a Meetup API "events" query response.
@@ -25,10 +24,10 @@ const validateStatus = status => (
  * @see https://github.com/mzabriskie/axios#response-schema
  * @see https://www.meetup.com/meetup_api/docs/:urlname/events/:id/#get
  */
-const parseEventsResponse = (response) => {
+const parseEventsResponse = response => {
   // This case covers invalid Meetup group names as well as invalid event IDs.
   if (response.status === 404) {
-    throw new Error('Sorry, I couldn\'t find any information on that.');
+    throw new Error("Sorry, I couldn't find any information on that.");
   }
 
   if (response.data.length) {
@@ -37,7 +36,7 @@ const parseEventsResponse = (response) => {
     return response.data;
   }
 
-  throw new Error('Sorry, I couldn\'t find any upcoming events.');
+  throw new Error("Sorry, I couldn't find any upcoming events.");
 };
 
 /**
@@ -48,7 +47,7 @@ const parseEventsResponse = (response) => {
  * @throws {Error} event visibility must be "public"
  * @see https://www.meetup.com/meetup_api/docs/:urlname/events/:id/#get
  */
-const getIdFromEvent = (event) => {
+const getIdFromEvent = event => {
   if (event.visibility && event.visibility === 'public') {
     return event.id;
   }
@@ -65,14 +64,13 @@ const getIdFromEvent = (event) => {
  * @returns {string|null} a custom "rsvps" API endpoint URL, or null if no
  * custom URL is necessary
  */
-const getRsvpsUrl = (baseUrl, eventId, apiKey) => (
+const getRsvpsUrl = (baseUrl, eventId, apiKey) =>
   apiKey
     ? oneLineTrim`
         ${baseUrl}/${eventId}/rsvps?only=group.urlname,member,response
         &key=${encodeURIComponent(apiKey)}&sign=true
       `
-    : null
-);
+    : null;
 
 /**
  * Selects some raffle winners.
@@ -100,13 +98,13 @@ module.exports = async (
     .get(eventUrl, { validateStatus })
     .then(parseEventsResponse)
     .then(getIdFromEvent)
-    .then((eventId) => {
+    .then(eventId => {
       meetupRandomizer.setCustomApiUrl(
         getRsvpsUrl(baseUrl, eventId, meetupApiKey)
       );
       return meetupRandomizer.run(meetup, eventId, count);
     })
-    .then((winners) => {
+    .then(winners => {
       if (Array.isArray(winners) && winners.length) {
         return { winners: winners.map(winner => winner.name) };
       }
