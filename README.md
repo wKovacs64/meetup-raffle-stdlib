@@ -4,7 +4,7 @@
 [Meetup][meetup] event.*
 
 [![Build Status][travis-image]][travis-url]
-[![Code Coverage][coveralls-image]][coveralls-url]
+[![Code Coverage][coverage-image]][coverage-url]
 
 ### The default (and only) function:
 
@@ -116,8 +116,8 @@ lib.wKovacs64['meetup-raffle']({ meetup: 'your-group-name' })
 [stdlib]: https://stdlib.com
 [travis-image]: https://img.shields.io/travis/wKovacs64/meetup-raffle.svg?style=flat-square
 [travis-url]: https://travis-ci.org/wKovacs64/meetup-raffle
-[coveralls-image]: https://img.shields.io/coveralls/wKovacs64/meetup-raffle.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/github/wKovacs64/meetup-raffle
+[coverage-image]: https://img.shields.io/codecov/c/github/wKovacs64/meetup-raffle/master.svg?style=flat-square
+[coverage-url]: https://codecov.io/github/wKovacs64/meetup-raffle?branch=master
 [meetup-randomizer]: https://github.com/durancristhian/meetup-randomizer
 [sponsor-image]: https://app.codesponsor.io/embed/1Z34ZozRAhWZ8QKV42A2yt3r/wKovacs64/meetup-raffle.svg
 [sponsor-link]: https://app.codesponsor.io/link/1Z34ZozRAhWZ8QKV42A2yt3r/wKovacs64/meetup-raffle
