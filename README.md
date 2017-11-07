@@ -117,7 +117,7 @@ lib.wKovacs64['meetup-raffle']({ meetup: 'your-group-name' })
 [travis-image]: https://img.shields.io/travis/wKovacs64/meetup-raffle.svg?style=flat-square
 [travis-url]: https://travis-ci.org/wKovacs64/meetup-raffle
 [coverage-image]: https://img.shields.io/codecov/c/github/wKovacs64/meetup-raffle/master.svg?style=flat-square
-[coverage-url]: https://codecov.io/github/wKovacs64/meetup-raffle?branch=master
+[coverage-url]: https://codecov.io/github/wKovacs64/meetup-raffle
 [meetup-randomizer]: https://github.com/durancristhian/meetup-randomizer
 [sponsor-image]: https://app.codesponsor.io/embed/1Z34ZozRAhWZ8QKV42A2yt3r/wKovacs64/meetup-raffle.svg
 [sponsor-link]: https://app.codesponsor.io/link/1Z34ZozRAhWZ8QKV42A2yt3r/wKovacs64/meetup-raffle
