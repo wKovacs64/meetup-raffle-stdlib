@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 3.0.1 *(2017-11-07)*
+
+* Internal maintenance
+
 ## Version 3.0.0 *(2017-08-06)*
 
 * Updated HTTP endpoint links to use new lib.id domain
