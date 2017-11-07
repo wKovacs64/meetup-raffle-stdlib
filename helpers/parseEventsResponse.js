@@ -1,12 +1,12 @@
 /**
-* Extracts an event object from a Meetup API "events" query response.
-*
-* @param {Object} response an Axios response object
-* @returns {Object} an event object
-* @throws {Error} proper event data is expected in the given response
-* @see https://github.com/mzabriskie/axios#response-schema
-* @see https://www.meetup.com/meetup_api/docs/:urlname/events/:id/#get
-*/
+ * Extracts an event object from a Meetup API "events" query response.
+ *
+ * @param {Object} response an Axios response object
+ * @returns {Object} an event object
+ * @throws {Error} proper event data is expected in the given response
+ * @see https://github.com/mzabriskie/axios#response-schema
+ * @see https://www.meetup.com/meetup_api/docs/:urlname/events/:id/#get
+ */
 const parseEventsResponse = response => {
   // This case covers invalid Meetup group names as well as invalid event IDs.
   if (response.status === 404) {
