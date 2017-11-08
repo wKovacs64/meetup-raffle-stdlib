@@ -45,7 +45,7 @@
     "eslint-plugin-import": "^2.8.0",
     "jest": "^21.2.1",
     "moxios": "^0.4.0",
-    "prettier": "^1.8.0",
+    "prettier": "^1.8.1",
     "rimraf": "^2.6.2"
   },
   "engines": {
