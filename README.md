@@ -1,7 +1,7 @@
 # meetup-raffle
 
-*An [StdLib][stdlib] microservice for selecting a raffle winner at a
-[Meetup][meetup] event.*
+_An [StdLib][stdlib] microservice for selecting a raffle winner at a
+[Meetup][meetup] event._
 
 [![Build Status][travis-image]][travis-url]
 [![Code Coverage][coverage-image]][coverage-url]
@@ -15,11 +15,11 @@ hosts are excluded.
 
 ##### Parameters
 
-* `meetup`: the name of the Meetup group *(**required**)*
-* `event`: the ID of a particular event *(optional, default: soonest
-  upcoming/in-progress event)*
-* `meetupApiKey`: your private Meetup API key *(optional, default: none)*
-* `count`: the number of winners to draw *(optional, default: 1)*
+* `meetup`: the name of the Meetup group _(**required**)_
+* `event`: the ID of a particular event _(optional, default: soonest
+  upcoming/in-progress event)_
+* `meetupApiKey`: your private Meetup API key _(optional, default: none)_
+* `count`: the number of winners to draw _(optional, default: 1)_
 
 ##### Data Returned
 
@@ -28,9 +28,7 @@ raffle winners), or an StdLib error message in the event of a failure.
 
 ```json
 {
-    "winners": [
-        "Tiny Rick"
-    ]
+  "winners": ["Tiny Rick"]
 }
 ```
 
@@ -87,10 +85,10 @@ https://wkovacs64.lib.id/meetup-raffle/?meetup=your-group-name&meetupApiKey=XXXX
 const lib = require('lib');
 
 lib.wKovacs64['meetup-raffle']({ meetup: 'your-group-name' })
-  .then((data) => {
+  .then(data => {
     // handle data
   })
-  .catch((err) => {
+  .catch(err => {
     // handle error
   });
 ```

@@ -8,8 +8,8 @@ and style in order to keep the code as readable as possible. This project
 roughly adheres to the [Airbnb][airbnb] code style (particularly for linting)
 and is formatted using [prettier][prettier].
 
-If adding new functionality, please be sure to include the appropriate tests
-as well. All tests must pass before a merge can be accepted.
+If adding new functionality, please be sure to include the appropriate tests as
+well. All tests must pass before a merge can be accepted.
 
 Thank you.
 

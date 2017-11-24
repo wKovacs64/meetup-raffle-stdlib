@@ -1,18 +1,18 @@
 # Change Log
 
-## Version 3.0.3 *(2017-11-08)*
+## Version 3.0.3 _(2017-11-08)_
 
 * Internal maintenance
 
-## Version 3.0.2 *(2017-11-07)*
+## Version 3.0.2 _(2017-11-07)_
 
 * Internal maintenance
 
-## Version 3.0.1 *(2017-11-07)*
+## Version 3.0.1 _(2017-11-07)_
 
 * Internal maintenance
 
-## Version 3.0.0 *(2017-08-06)*
+## Version 3.0.0 _(2017-08-06)_
 
 * Updated HTTP endpoint links to use new lib.id domain
 * Added new `count` option to draw multiple winners at once, per
@@ -24,11 +24,11 @@
   strings representing the names of the winners in order to support the new
   `count` option
 
-## Version 2.0.1 *(2017-05-25)*
+## Version 2.0.1 _(2017-05-25)_
 
 * Updated `meetup-randomizer` for better error handling
 
-## Version 2.0.0 *(2017-05-21)*
+## Version 2.0.0 _(2017-05-21)_
 
 * Updated to be [FaaSlang](https://github.com/faaslang/faaslang) compliant
 * Improved error handling for unexpected data
@@ -38,21 +38,21 @@
 * Removed the `winner` function, moving functionality to the default function
   (which most of the documentation has always referenced anyway)
 
-## Version 1.0.3 *(2017-02-14)*
+## Version 1.0.3 _(2017-02-14)_
 
 * Updated usage documentation to show `winner` is the default function
 * Mocked all unexpected API requests in test to prevent actual network traffic
 * Restructured `winner` test file to match the corresponding source
 
-## Version 1.0.2 *(2017-02-14)*
+## Version 1.0.2 _(2017-02-14)_
 
 * Fixed minor typos in documentation
 
-## Version 1.0.1 *(2017-02-13)*
+## Version 1.0.1 _(2017-02-13)_
 
 * Refactored for readability and testability
 * Added tests
 
-## Version 1.0.0 *(2017-02-11)*
+## Version 1.0.0 _(2017-02-11)_
 
 * Initial release
