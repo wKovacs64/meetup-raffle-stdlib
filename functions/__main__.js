@@ -30,20 +30,15 @@ module.exports = async (
     ${baseUrl}/${encodeURIComponent(specificEventId)}${eventUrlSuffix}
   `;
 
-  return axios
-    .get(eventUrl, { validateStatus })
-    .then(parseEventsResponse)
-    .then(getIdFromEvent)
-    .then(eventId => {
-      meetupRandomizer.setCustomApiUrl(
-        getRsvpsUrl(baseUrl, eventId, meetupApiKey)
-      );
-      return meetupRandomizer.run(meetup, eventId, count);
-    })
-    .then(winners => {
-      if (Array.isArray(winners) && winners.length) {
-        return { winners: winners.map(winner => winner.name) };
-      }
-      throw new Error('Sorry, we received unexpected data for that request.');
-    });
+  const response = await axios.get(eventUrl, { validateStatus });
+  const eventId = getIdFromEvent(parseEventsResponse(response));
+
+  meetupRandomizer.setCustomApiUrl(getRsvpsUrl(baseUrl, eventId, meetupApiKey));
+  const winners = await meetupRandomizer.run(meetup, eventId, count);
+
+  if (Array.isArray(winners) && winners.length) {
+    return { winners: winners.map(winner => winner.name) };
+  }
+
+  throw new Error('Sorry, we received unexpected data for that request.');
 };
