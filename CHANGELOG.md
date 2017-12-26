@@ -1,5 +1,11 @@
 # Change Log
 
+## Version 3.0.4 _(2017-12-26)_
+
+* Bumped supported node version from 7 to 8
+* Updated documentation URL to reflect StdLib changes
+* Improved tests with Jest 22
+
 ## Version 3.0.3 _(2017-11-08)_
 
 * Internal maintenance
