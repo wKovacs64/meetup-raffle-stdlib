@@ -49,7 +49,7 @@
     "rimraf": "^2.6.2"
   },
   "engines": {
-    "node": ">= 7"
+    "node": ">= 8"
   },
   "private": true,
   "stdlib": {
