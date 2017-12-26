@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`winner should reject if Event not found 1`] = `"Sorry, I couldn't find any information on that."`;
+
+exports[`winner should reject if Event not public 1`] = `"Sorry, their members list is private."`;
+
+exports[`winner should reject if Meetup not found 1`] = `"Sorry, I couldn't find any information on that."`;
+
+exports[`winner should reject if no upcoming Events found 1`] = `"Sorry, I couldn't find any upcoming events."`;
+
+exports[`winner should reject on unexpected data 1`] = `"Sorry, we received unexpected data for that request."`;
+
+exports[`winner should resolve with a winner for a valid Meetup Event 1`] = `
+Object {
+  "winners": Array [
+    "Tiny Rick",
+  ],
+}
+`;

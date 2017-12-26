@@ -5,7 +5,6 @@ const {
   MEETUP,
   MEETUP_NO_EVENTS,
   MEETUP_NOT_FOUND,
-  WINNER_NAME,
 } = require('../__mocks__/testData');
 const winner = require('../functions/__main__');
 
@@ -16,35 +15,26 @@ jest.mock('meetup-randomizer', () =>
 
 describe('winner', () => {
   it('should reject if Meetup not found', () =>
-    expect(winner(MEETUP_NOT_FOUND)).rejects.toHaveProperty(
-      'message',
-      expect.stringMatching(/^Sorry/)
-    ));
+    expect(winner(MEETUP_NOT_FOUND)).rejects.toThrowErrorMatchingSnapshot());
 
   it('should reject if no upcoming Events found', () =>
-    expect(winner(MEETUP_NO_EVENTS)).rejects.toHaveProperty(
-      'message',
-      expect.stringMatching(/^Sorry/)
-    ));
+    expect(winner(MEETUP_NO_EVENTS)).rejects.toThrowErrorMatchingSnapshot());
 
   it('should reject if Event not found', () =>
-    expect(winner(MEETUP, EVENT_ID_NOT_FOUND)).rejects.toHaveProperty(
-      'message',
-      expect.stringMatching(/^Sorry/)
-    ));
+    expect(
+      winner(MEETUP, EVENT_ID_NOT_FOUND)
+    ).rejects.toThrowErrorMatchingSnapshot());
 
   it('should reject if Event not public', () =>
-    expect(winner(MEETUP, EVENT_ID_NOT_PUBLIC)).rejects.toHaveProperty(
-      'message',
-      expect.stringMatching(/^Sorry/)
-    ));
+    expect(
+      winner(MEETUP, EVENT_ID_NOT_PUBLIC)
+    ).rejects.toThrowErrorMatchingSnapshot());
 
   it('should reject on unexpected data', () =>
-    expect(winner(MEETUP, EVENT_ID_UNEXPECTED)).rejects.toHaveProperty(
-      'message',
-      expect.stringMatching(/^Sorry/)
-    ));
+    expect(
+      winner(MEETUP, EVENT_ID_UNEXPECTED)
+    ).rejects.toThrowErrorMatchingSnapshot());
 
   it('should resolve with a winner for a valid Meetup Event', () =>
-    expect(winner(MEETUP)).resolves.toMatchObject({ winners: [WINNER_NAME] }));
+    expect(winner(MEETUP)).resolves.toMatchSnapshot());
 });
