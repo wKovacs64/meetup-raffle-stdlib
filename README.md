@@ -1,4 +1,4 @@
-# meetup-raffle
+# meetup-raffle-stdlib
 
 _An [StdLib][stdlib] microservice for selecting a raffle winner at a
 [Meetup][meetup] event._
@@ -106,8 +106,8 @@ lib.wKovacs64['meetup-raffle']({ meetup: 'your-group-name' })
 
 [meetup]: https://www.meetup.com
 [stdlib]: https://stdlib.com
-[travis-image]: https://img.shields.io/travis/wKovacs64/meetup-raffle.svg?style=flat-square
-[travis-url]: https://travis-ci.org/wKovacs64/meetup-raffle
-[coverage-image]: https://img.shields.io/coveralls/wKovacs64/meetup-raffle.svg?style=flat-square
-[coverage-url]: https://coveralls.io/github/wKovacs64/meetup-raffle
+[travis-image]: https://img.shields.io/travis/wKovacs64/meetup-raffle-stdlib.svg?style=flat-square
+[travis-url]: https://travis-ci.org/wKovacs64/meetup-raffle-stdlib
+[coverage-image]: https://img.shields.io/coveralls/wKovacs64/meetup-raffle-stdlib.svg?style=flat-square
+[coverage-url]: https://coveralls.io/github/wKovacs64/meetup-raffle-stdlib
 [meetup-randomizer]: https://github.com/durancristhian/meetup-randomizer

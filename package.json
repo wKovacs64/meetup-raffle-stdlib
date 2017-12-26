@@ -1,5 +1,5 @@
 {
-  "name": "meetup-raffle",
+  "name": "meetup-raffle-stdlib",
   "version": "3.0.5-dev.0",
   "description": "Select a raffle winner at your upcoming Meetup.",
   "keywords": [
@@ -14,13 +14,13 @@
   },
   "contributors": [],
   "license": "MIT",
-  "homepage": "https://github.com/wKovacs64/meetup-raffle",
+  "homepage": "https://github.com/wKovacs64/meetup-raffle-stdlib",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/wKovacs64/meetup-raffle.git"
+    "url": "git+ssh://git@github.com/wKovacs64/meetup-raffle-stdlib.git"
   },
   "bugs": {
-    "url": "https://github.com/wKovacs64/meetup-raffle/issues"
+    "url": "https://github.com/wKovacs64/meetup-raffle-stdlib/issues"
   },
   "main": "functions/winner/__main__.js",
   "scripts": {
