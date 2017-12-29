@@ -1,5 +1,16 @@
 # Change Log
 
+## Version 4.0.0 _(2017-12-29)_
+
+* Renamed the project to `meetup-raffle-stdlib` for logistical reasons (but left
+  it as `meetup-raffle` on [StdLib][stdlib])
+
+##### Breaking Changes:
+
+* Changed the `winners` array in the response from an array of strings (names)
+  to an array of objects which includes the full attendee information from
+  upstream (`name`, `photoURL`, and `profileURL` strings)
+
 ## Version 3.0.4 _(2017-12-26)_
 
 * Bumped supported node version from 7 to 8
@@ -36,7 +47,7 @@
 
 ## Version 2.0.0 _(2017-05-21)_
 
-* Updated to be [FaaSlang](https://github.com/faaslang/faaslang) compliant
+* Updated to be [FaaSlang][faaslang] compliant
 * Improved error handling for unexpected data
 
 ##### Breaking Changes:
@@ -62,3 +73,6 @@
 ## Version 1.0.0 _(2017-02-11)_
 
 * Initial release
+
+[stdlib]: https://stdlib.com/@wKovacs64/lib/meetup-raffle
+[faaslang]: https://github.com/faaslang/faaslang
