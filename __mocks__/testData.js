@@ -37,7 +37,11 @@ const API_KEY = 'bar456';
 const MEETUP = 'foo';
 const MEETUP_NOT_FOUND = 'bar';
 const MEETUP_NO_EVENTS = 'baz';
-const WINNER_NAME = 'Tiny Rick';
+const WINNERS = {
+  name: 'Tiny Rick',
+  photoURL: 'https://i.imgur.com/rgDv1wB.jpg',
+  profileURL: 'http://rickandmorty.wikia.com/wiki/Tiny_Rick',
+};
 
 module.exports = {
   STATUS_200,
@@ -60,5 +64,5 @@ module.exports = {
   MEETUP,
   MEETUP_NOT_FOUND,
   MEETUP_NO_EVENTS,
-  WINNER_NAME,
+  WINNERS,
 };

@@ -13,7 +13,11 @@ exports[`winner should reject on unexpected data 1`] = `"Sorry, we received unex
 exports[`winner should resolve with a winner for a valid Meetup Event 1`] = `
 Object {
   "winners": Array [
-    "Tiny Rick",
+    Object {
+      "name": "Tiny Rick",
+      "photoURL": "https://i.imgur.com/rgDv1wB.jpg",
+      "profileURL": "http://rickandmorty.wikia.com/wiki/Tiny_Rick",
+    },
   ],
 }
 `;

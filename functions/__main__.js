@@ -15,8 +15,8 @@ const {
  * @param {string} specificEventId an ID of a particular event
  * @param {string} meetupApiKey your private Meetup API key
  * @param {number} count the number of winners to draw (default: 1)
- * @returns {object} an object containing a winners array of strings (the names
- * of the winners)
+ * @returns {object} an object containing a winners array of attendee objects,
+ * each containing name (string), photoURL (string), and profileURL (string)
  */
 module.exports = async (
   meetup,
@@ -37,7 +37,7 @@ module.exports = async (
   const winners = await meetupRandomizer.run(meetup, eventId, count);
 
   if (Array.isArray(winners) && winners.length) {
-    return { winners: winners.map(winner => winner.name) };
+    return { winners };
   }
 
   throw new Error('Sorry, we received unexpected data for that request.');

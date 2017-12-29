@@ -23,12 +23,21 @@ hosts are excluded.
 
 ##### Data Returned
 
-Returns a JSON object containing a `winners` array of strings (the names of the
-raffle winners), or an StdLib error message in the event of a failure.
+Returns a JSON object containing a `winners` array of attendee objects (the
+raffle winners), or an StdLib error message in the event of a failure. Each
+attendee object includes the `name`, `photoURL`, and `profileURL` properties as
+strings (forwarded on from the [`meetup-randomizer`][meetup-randomizer]
+library).
 
 ```json
 {
-  "winners": ["Tiny Rick"]
+  "winners": [
+    {
+      "name": "Tiny Rick",
+      "photoURL": "https://i.imgur.com/rgDv1wB.jpg",
+      "profileURL": "http://rickandmorty.wikia.com/wiki/Tiny_Rick"
+    }
+  ]
 }
 ```
 
