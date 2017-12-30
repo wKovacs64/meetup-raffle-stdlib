@@ -16,7 +16,7 @@ hosts are excluded.
 ##### Parameters
 
 * `meetup`: the name of the Meetup group _(**required**)_
-* `event`: the ID of a particular event _(optional, default: soonest
+* `specificEventId`: the ID of a particular event _(optional, default: soonest
   upcoming/in-progress event)_
 * `meetupApiKey`: your private Meetup API key _(optional, default: none)_
 * `count`: the number of winners to draw _(optional, default: 1)_
