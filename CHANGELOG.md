@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 4.0.1 _(2017-12-30)_
+
+* Fixed incorrect parameter reference in [README](README.md) (replaced `eventId`
+  with `specificEventId`)
+
 ## Version 4.0.0 _(2017-12-29)_
 
 * Renamed the project to `meetup-raffle-stdlib` for logistical reasons (but left
