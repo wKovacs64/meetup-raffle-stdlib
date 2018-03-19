@@ -10,5 +10,6 @@ __mocks__
 .travis.yml
 coverage
 jest.config.js
+renovate.json
 test
 yarn.lock
