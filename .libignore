@@ -9,6 +9,6 @@ __mocks__
 .prettierrc
 .travis.yml
 coverage
-jest.config.json
+jest.config.js
 test
 yarn.lock
