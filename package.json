@@ -43,7 +43,7 @@
     "eslint-config-airbnb-base": "12.1.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-import": "2.9.0",
-    "jest": "22.0.4",
+    "jest": "22.4.2",
     "moxios": "0.4.0",
     "prettier": "1.11.1",
     "rimraf": "2.6.2"
