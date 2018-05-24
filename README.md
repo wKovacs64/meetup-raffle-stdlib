@@ -1,3 +1,9 @@
+# [DEPRECATED]
+
+Warning: this project is no longer maintained. Please see [wKovacs64/meetup-raffle](https://github.com/wKovacs64/meetup-raffle) for similar functionality.
+
+<hr>
+
 # meetup-raffle-stdlib
 
 _An [StdLib][stdlib] microservice for selecting a raffle winner at a
